@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.orp/1999/xhtml"
+	xmlns:th="http://www.thmeleaf.org" lang="zh">
+<head>
+<title>thymeleaf</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css">
+h2{background: red;}
+
+</style>
+<script type="text/javascript"> 
+	alert(1)
+	
+</script>
+</head>
+<body>
+	<h2>hello thymeleaf</h2>
+	<label th:text='${name}'></label>
+	<p th:text="'Hello, ' + ${name} + '!'">3333</p>
+	<a th:href="@{/}">hoho </a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd    	
+     	http://www.springframework.org/schema/tx
+     	 http://www.springframework.org/schema/tx/spring-tx-4.3.xsd
+     	http://www.springframework.org/schema/util 
+     	http://www.springframework.org/schema/util/spring-util-4.3.xsd 
+     	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd"
+	default-lazy-init="true">
+	
+	<!-- 注解方式  start -->
+	
+   <context:annotation-config />
+    <context:component-scan base-package="com.test.www"></context:component-scan> 
+     <aop:aspectj-autoproxy proxy-target-class="true" ></aop:aspectj-autoproxy>
+    
+     <!--   注解方式  end -->
+ 
+  <!-- XML方式star -->
+  <!--  <bean id="aOPXML" class="com.test.www.aop.xml.AOPXMLImpl"></bean> 
+   <bean id="adviceXML" class="com.test.www.aop.xml.AdviceXML"></bean>
+  
+  <aop:config>
+  	<aop:aspect ref="adviceXML">
+  		<aop:pointcut expression="execution(** com.test.www.aop.xml.AOPXML.*(..))" id="pointcut"/>
+  	    
+  	     <aop:before pointcut-ref="pointcut" method="before"/>
+  	     <aop:after pointcut-ref="pointcut" method="after_return"/>  
+  	    <aop:around pointcut-ref="pointcut" method="around"/>  
+  	</aop:aspect>
+  </aop:config> 
+   -->
+   <!-- XML方式star -->
+  
+</beans>
