@@ -14,6 +14,9 @@ public class TestThymeleaf {
 
 	@Autowired
 	ExamineeMapper examineeMapper;
+	
+	@Autowired
+	ExaminationsMapper examinationsMapper;
 
 	@RequestMapping(value = "/", produces = "text/html; charset=UTF-8", method = RequestMethod.GET)
 	public String index(Map<String, Object> model) {
@@ -21,6 +24,7 @@ public class TestThymeleaf {
 		model.put("name", "123");
 		System.out.println(teacherService.selectByPrimaryKey(1));
 		System.out.println(examineeMapper.selectById(1));
+		System.out.println(examinationsMapper.selectById(3));
 		System.out.println(1);
 		return "index";
 	}
